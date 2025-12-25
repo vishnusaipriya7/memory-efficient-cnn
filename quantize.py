@@ -9,17 +9,11 @@ import tensorflow as tf
 import numpy as np
 import os
 
-
-# ---------------------------------------------------------
 # Paths
-# ---------------------------------------------------------
 SAVED_MODEL_DIR = "cnn_fp32"
 TFLITE_OUTPUT_PATH = "tflite_models/cnn_int8.tflite"
 
-
-# ---------------------------------------------------------
 # Representative Dataset Generator
-# ---------------------------------------------------------
 def representative_data_gen():
     """
     Provides sample input data for calibrating INT8 quantization.
@@ -31,9 +25,8 @@ def representative_data_gen():
         yield [data]
 
 
-# ---------------------------------------------------------
 # Quantization Function
-# ---------------------------------------------------------
+
 def quantize_model():
     print("🔄 Loading SavedModel...")
 
@@ -67,8 +60,6 @@ def quantize_model():
     print(f"✅ INT8 TFLite model saved at: {TFLITE_OUTPUT_PATH}")
 
 
-# ---------------------------------------------------------
 # Entry Point
-# ---------------------------------------------------------
 if __name__ == "__main__":
     quantize_model()
