@@ -1,44 +1,107 @@
-# Memory-Efficient CNN for Low-Resource Devices
+ Memory-Efficient CNN for Low-Resource Devices
+Overview
 
-## Overview
-This project implements a lightweight convolutional neural network optimized for edge and low-resource devices using depthwise separable convolutions and TensorFlow Lite INT8 quantization.
+This project implements a lightweight Convolutional Neural Network (CNN) optimized for low-resource and edge devices. The model is designed using depthwise separable convolutions to reduce computation and memory usage, and is further optimized using 8-bit (INT8) post-training quantization with TensorFlow Lite.
 
-## Key Features
-- Depthwise separable CNN architecture
-- Post-training full INT8 quantization using TensorFlow Lite
-- CPU inference latency benchmarking
-- Optimized for low-resource and edge devices
+The optimized model is benchmarked for CPU inference latency and deployed using a Python-based TensorFlow Lite inference application, simulating real-world edge deployment.
 
-## Technologies Used
-- Python 3
-- TensorFlow 2.x
-- TensorFlow Lite
-- NumPy
+Key Features
 
-## Project Structure
-model.py # CNN architecture
-train.py # Training pipeline
-quantize.py # INT8 quantization
-benchmark.py # CPU latency benchmarking
-benchmark_report.md
-tflite_models/ # TFLite INT8 model
+Lightweight CNN architecture using depthwise separable convolutions
 
-## Results
-- ~4× reduction in model size
-- ~3× faster CPU inference
-- Sub-5 ms inference latency on CPU
+Full INT8 quantization using TensorFlow Lite
 
-## Use Cases
+CPU latency benchmarking for performance evaluation
 
--->Edge AI
+Deployment-ready TFLite model
 
--->Mobile vision systems
+Clean and modular project structure
 
--->Embedded and IoT devices
+🛠️ Technologies Used
 
-## How to Run
-```bash
-python train.py
-python quantize.py
-python benchmark.py
+Python 3
 
+TensorFlow 2.x
+
+TensorFlow Lite
+
+NumPy
+
+📁 Project Structure
+memory-efficient-cnn/
+│
+├── src/
+│   ├── model.py          # CNN architecture
+│   ├── train.py          # Model training pipeline
+│   ├── quantize.py       # INT8 TensorFlow Lite quantization
+│   ├── benchmark.py      # CPU inference latency benchmark
+│   └── app.py            # Deployment (CPU inference)
+│
+├── tflite_models/
+│   └── cnn_int8.tflite   # Quantized INT8 TFLite model
+│
+├── reports/
+│   └── benchmark_report.md
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+Workflow
+
+Model Design
+Built a lightweight CNN using depthwise separable convolution blocks.
+
+Training
+Trained the model using TensorFlow on the CIFAR-10 dataset.
+
+Quantization
+Applied post-training full INT8 quantization using TensorFlow Lite.
+
+Benchmarking
+Measured average CPU inference latency using the TFLite Interpreter.
+
+Deployment
+Deployed the optimized model using a Python-based inference script to simulate edge-device deployment.
+
+📊 Results
+
+->4× reduction in model size
+
+->3× faster CPU inference
+
+ Sub-5 ms average inference latency on CPU
+
+▶️ How to Run
+1️⃣ Install dependencies
+pip install -r requirements.txt
+
+2️⃣ Train the model
+python src/train.py
+
+3️⃣ Quantize to INT8
+python src/quantize.py
+
+4️⃣ Benchmark CPU latency
+python src/benchmark.py
+
+5️⃣ Run deployment (CPU inference)
+python src/app.py
+
+💡 Use Cases
+
+Edge AI applications
+
+Mobile and embedded vision systems
+
+IoT devices with limited compute
+
+Real-time CPU-based inference
+
+🧾 Conclusion
+
+This project demonstrates a complete end-to-end machine learning pipeline—from efficient model design and training to optimization, benchmarking, and deployment—focused on practical deployment for low-resource environments.
+
+⭐ If you like this project
+
+Feel free to ⭐ the repository and explore further optimizations like pruning or MobileNet-style scaling.
