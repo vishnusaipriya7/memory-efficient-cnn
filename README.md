@@ -1,11 +1,11 @@
- Memory-Efficient CNN for Low-Resource Devices
-Overview
+🧠 Memory-Efficient CNN for Low-Resource Devices
+📌 Overview
 
 This project implements a lightweight Convolutional Neural Network (CNN) optimized for low-resource and edge devices. The model is designed using depthwise separable convolutions to reduce computation and memory usage, and is further optimized using 8-bit (INT8) post-training quantization with TensorFlow Lite.
 
 The optimized model is benchmarked for CPU inference latency and deployed using a Python-based TensorFlow Lite inference application, simulating real-world edge deployment.
 
-Key Features
+🎯 Key Features
 
 Lightweight CNN architecture using depthwise separable convolutions
 
@@ -47,7 +47,7 @@ memory-efficient-cnn/
 ├── README.md
 └── .gitignore
 
-Workflow
+🚀 Workflow
 
 Model Design
 Built a lightweight CNN using depthwise separable convolution blocks.
@@ -66,11 +66,11 @@ Deployed the optimized model using a Python-based inference script to simulate e
 
 📊 Results
 
-->4× reduction in model size
+📦 ~4× reduction in model size
 
-->3× faster CPU inference
+⚡ ~3× faster CPU inference
 
- Sub-5 ms average inference latency on CPU
+⏱️ Sub-5 ms average inference latency on CPU
 
 ▶️ How to Run
 1️⃣ Install dependencies
