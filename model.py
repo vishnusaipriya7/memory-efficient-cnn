@@ -87,9 +87,7 @@ def build_model(
 
     inputs = layers.Input(shape=input_shape)
 
-    # -----------------------------------------------------
     # Initial Standard Convolution (Stem Layer)
-    # -----------------------------------------------------
     x = layers.Conv2D(
         filters=int(32 * width_multiplier),
         kernel_size=3,
