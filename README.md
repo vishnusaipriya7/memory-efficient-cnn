@@ -25,25 +25,8 @@ The optimized model is benchmarked for **CPU inference latency** and deployed us
 ---
 
 ## 📁 Project Structure
-memory-efficient-cnn/
-│
-├── src/
-│ ├── model.py # CNN architecture
-│ ├── train.py # Model training pipeline
-│ ├── quantize.py # INT8 TensorFlow Lite quantization
-│ ├── benchmark.py # CPU inference latency benchmark
-│ └── app.py # Deployment (CPU inference)
-│
-├── tflite_models/
-│ └── cnn_int8.tflite # Quantized INT8 TFLite model
-│
-├── reports/
-│ └── benchmark_report.md
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
 
+<img width="643" height="626" alt="image" src="https://github.com/user-attachments/assets/3f2b0dc5-7f50-4b13-867f-3abb1e408a06" />
 
 ---
 
