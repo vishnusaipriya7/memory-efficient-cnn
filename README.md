@@ -28,12 +28,6 @@ tflite_models/ # TFLite INT8 model
 - ~3× faster CPU inference
 - Sub-5 ms inference latency on CPU
 
-## How to Run
-```bash
-python train.py
-python quantize.py
-python benchmark.py
-
 ## Use Cases
 
 -->Edge AI
@@ -41,3 +35,10 @@ python benchmark.py
 -->Mobile vision systems
 
 -->Embedded and IoT devices
+
+## How to Run
+```bash
+python train.py
+python quantize.py
+python benchmark.py
+
