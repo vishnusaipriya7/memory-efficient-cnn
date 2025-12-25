@@ -10,8 +10,8 @@
 
 | Model Type | Format | Size |
 |----------|--------|------|
-| FP32 | TensorFlow SavedModel | ~4–6 MB |
-| INT8 | TensorFlow Lite | ~1–2 MB |
+| FP32 | TensorFlow SavedModel | 4–6 MB |
+| INT8 | TensorFlow Lite | 1–2 MB |
 
 ➡️ ~4× reduction in model size.
 
@@ -19,7 +19,7 @@
 
 | Model | Avg Latency (ms) |
 |-----|------------------|
-| INT8 TFLite | ~3–5 ms |
+| INT8 TFLite | 3–5 ms |
 
 ➡️ Optimized for real-time inference on low-resource CPUs.
 
