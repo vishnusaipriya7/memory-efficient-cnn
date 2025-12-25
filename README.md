@@ -34,7 +34,7 @@ python train.py
 python quantize.py
 python benchmark.py
 
-Use Cases
+## Use Cases
 
 -->Edge AI
 
