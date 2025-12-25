@@ -15,10 +15,7 @@ from tensorflow.keras.callbacks import (
 
 from model import build_model
 
-
-# ---------------------------------------------------------
 # Configuration
-# ---------------------------------------------------------
 BATCH_SIZE = 64
 EPOCHS = 20
 NUM_CLASSES = 10
@@ -26,10 +23,8 @@ INPUT_SHAPE = (32, 32, 3)
 MODEL_SAVE_PATH = "cnn_fp32.keras"
 
 
-
-# ---------------------------------------------------------
 # Load and Preprocess Dataset
-# ---------------------------------------------------------
+
 def load_data():
     """
     Loads CIFAR-10 dataset and applies normalization.
@@ -42,10 +37,7 @@ def load_data():
 
     return x_train, y_train, x_test, y_test
 
-
-# ---------------------------------------------------------
 # Main Training Function
-# ---------------------------------------------------------
 def train():
     # Load data
     x_train, y_train, x_test, y_test = load_data()
@@ -64,9 +56,7 @@ def train():
         metrics=["accuracy"]
     )
 
-    # -----------------------------------------------------
     # Callbacks
-    # -----------------------------------------------------
     callbacks = [
         ModelCheckpoint(
             filepath=MODEL_SAVE_PATH,
@@ -88,9 +78,8 @@ def train():
         )
     ]
 
-    # -----------------------------------------------------
+  
     # Train Model
-    # -----------------------------------------------------
     model.fit(
         x_train,
         y_train,
@@ -100,15 +89,11 @@ def train():
         callbacks=callbacks
     )
 
-    # -----------------------------------------------------
     # Evaluate on Test Data
-    # -----------------------------------------------------
     test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
     print(f"\nTest Accuracy: {test_acc:.4f}")
 
-    # -----------------------------------------------------
     # Save Final FP32 Model
-    # -----------------------------------------------------
     # Save Keras format (for reuse / resume training)
     model.save("cnn_fp32.keras")
 
@@ -118,8 +103,6 @@ def train():
     print(f"\nModel saved at: {MODEL_SAVE_PATH}")
 
 
-# ---------------------------------------------------------
 # Entry Point
-# ---------------------------------------------------------
 if __name__ == "__main__":
     train()
