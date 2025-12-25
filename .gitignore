@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# TensorFlow artifacts
+cnn_fp32/
+cnn_fp32.keras
+
+# OS files
+.DS_Store
+Thumbs.db
