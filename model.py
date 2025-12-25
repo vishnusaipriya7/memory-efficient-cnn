@@ -13,10 +13,8 @@ Key features:
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
-
-# ---------------------------------------------------------
 # Depthwise Separable Convolution Block
-# ---------------------------------------------------------
+
 def depthwise_separable_block(
     x,
     filters,
@@ -69,10 +67,7 @@ def depthwise_separable_block(
 
     return x
 
-
-# ---------------------------------------------------------
 # Build Complete CNN Model
-# ---------------------------------------------------------
 def build_model(
     input_shape=(32, 32, 3),
     num_classes=10,
@@ -106,9 +101,7 @@ def build_model(
     x = layers.BatchNormalization()(x)
     x = layers.Activation("relu")(x)
 
-    # -----------------------------------------------------
     # Depthwise Separable Blocks
-    # -----------------------------------------------------
     x = depthwise_separable_block(
         x,
         filters=int(64 * width_multiplier),
@@ -130,15 +123,12 @@ def build_model(
         filters=int(256 * width_multiplier),
         strides=1
     )
-
-    # -----------------------------------------------------
     # Feature Aggregation
-    # -----------------------------------------------------
+
     x = layers.GlobalAveragePooling2D()(x)
 
-    # -----------------------------------------------------
     # Classification Head
-    # -----------------------------------------------------
+
     outputs = layers.Dense(
         num_classes,
         activation="softmax",
@@ -150,9 +140,7 @@ def build_model(
     return model
 
 
-# ---------------------------------------------------------
 # Model Summary (Debug / Sanity Check)
-# ---------------------------------------------------------
 if __name__ == "__main__":
     model = build_model()
     model.summary()
