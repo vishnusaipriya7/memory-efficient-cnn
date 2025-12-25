@@ -13,7 +13,7 @@
 | FP32 | TensorFlow SavedModel | 4–6 MB |
 | INT8 | TensorFlow Lite | 1–2 MB |
 
-➡️ ~4× reduction in model size.
+->4× reduction in model size.
 
 ## CPU Inference Latency
 
@@ -21,7 +21,7 @@
 |-----|------------------|
 | INT8 TFLite | 3–5 ms |
 
-➡️ Optimized for real-time inference on low-resource CPUs.
+-> Optimized for real-time inference on low-resource CPUs.
 
 ## Key Optimizations
 - Depthwise separable convolutions
