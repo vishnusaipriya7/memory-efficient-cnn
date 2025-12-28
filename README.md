@@ -24,12 +24,6 @@ The optimized model is benchmarked for **CPU inference latency** and deployed us
 
 ---
 
-## 📁 Project Structure
-
-<img width="643" height="626" alt="image" src="https://github.com/user-attachments/assets/3f2b0dc5-7f50-4b13-867f-3abb1e408a06" />
-
----
-
 ## 🚀 Workflow
 1. **Model Design**  
    Built a lightweight CNN using depthwise separable convolution blocks.
