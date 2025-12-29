@@ -127,5 +127,5 @@ python src/benchmark.py
 python src/app.py
 
 
-Summary
+## Summary
 This project delivers a production-ready, memory-efficient CNN optimized for low-resource environments. By combining efficient CNN design, TensorFlow Lite INT8 quantization, CPU benchmarking, and real deployment, it demonstrates a complete and practical approach to Edge AI optimization without reliance on cloud infrastructure or GPUs.
