@@ -1,4 +1,4 @@
-#Spotmies.AI –  Memory-Efficient CNN for Low-Resource Devices (Edge AI Optimization)
+# Spotmies.AI –  Memory-Efficient CNN for Low-Resource Devices (Edge AI Optimization)
 
 ## Overview
 This project implements a **memory-efficient Convolutional Neural Network (CNN)** designed specifically for **low-resource and edge devices**. The system focuses on reducing computational cost and memory footprint while maintaining reliable inference performance on CPU-only environments.
