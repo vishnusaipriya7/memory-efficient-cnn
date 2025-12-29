@@ -25,17 +25,16 @@ The project follows a modular ML pipeline architecture:
 Training Pipeline → Quantization → Benchmarking → Deployment
 
 Model Architecture (CNN)
+
 ↓
 FP32 Training (TensorFlow)
+
 ↓
 INT8 Quantization (TensorFlow Lite)
 ↓
 CPU Latency Benchmarking
 ↓
 Deployment via TFLite Interpreter
-
-yaml
-Copy code
 
 The system avoids heavyweight cloud inference and instead focuses on **local, deterministic, and cost-free CPU execution**, making it ideal for embedded and edge use cases.
 
