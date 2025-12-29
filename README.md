@@ -1,4 +1,4 @@
-# Memory-Efficient CNN for Low-Resource Devices (Edge AI Optimization)
+#Spotmies.AI –  Memory-Efficient CNN for Low-Resource Devices (Edge AI Optimization)
 
 ## Overview
 This project implements a **memory-efficient Convolutional Neural Network (CNN)** designed specifically for **low-resource and edge devices**. The system focuses on reducing computational cost and memory footprint while maintaining reliable inference performance on CPU-only environments.
@@ -85,30 +85,6 @@ The system avoids heavyweight cloud inference and instead focuses on **local, de
 - Simulates real edge-device deployment
 - No GPU, no cloud, no external APIs
 
----
-
-## Project Structure
-memory-efficient-cnn/
-│
-├── src/
-│ ├── model.py # Lightweight CNN architecture
-│ ├── train.py # Training pipeline (FP32)
-│ ├── quantize.py # INT8 TensorFlow Lite quantization
-│ ├── benchmark.py # CPU latency benchmarking
-│ └── app.py # Deployment (CPU inference)
-│
-├── tflite_models/
-│ └── cnn_int8.tflite # Quantized INT8 TFLite model
-│
-├── reports/
-│ └── benchmark_report.md
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-
-yaml
-Copy code
 
 ---
 
@@ -138,36 +114,18 @@ Copy code
 - TensorFlow 2.x
 - NumPy
 
-### Install Dependencies
-```bash
-pip install -r requirements.txt
-Running the Project
 1. Train the Model
-bash
-Copy code
 python src/train.py
+
 2. Quantize to INT8
-bash
-Copy code
 python src/quantize.py
+
 3. Benchmark CPU Latency
-bash
-Copy code
 python src/benchmark.py
+
 4. Run Deployment (CPU Inference)
-bash
-Copy code
 python src/app.py
-Use Cases
-Edge AI applications
 
-Embedded vision systems
-
-IoT devices with limited compute
-
-Real-time CPU-only inference
-
-Cost-sensitive ML deployments
 
 Summary
 This project delivers a production-ready, memory-efficient CNN optimized for low-resource environments. By combining efficient CNN design, TensorFlow Lite INT8 quantization, CPU benchmarking, and real deployment, it demonstrates a complete and practical approach to Edge AI optimization without reliance on cloud infrastructure or GPUs.
