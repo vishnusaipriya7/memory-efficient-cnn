@@ -31,10 +31,13 @@ FP32 Training (TensorFlow)
 
 ↓
 INT8 Quantization (TensorFlow Lite)
+
 ↓
 CPU Latency Benchmarking
+
 ↓
 Deployment via TFLite Interpreter
+
 
 The system avoids heavyweight cloud inference and instead focuses on **local, deterministic, and cost-free CPU execution**, making it ideal for embedded and edge use cases.
 
